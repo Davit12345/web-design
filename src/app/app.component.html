@@ -1,0 +1,159 @@
+
+
+<div class="container">
+  <div class="side-nav" id="mySidenav">
+    <img (click)="closeNav()" class="close-icon" src="../../../assets/images/close.png">
+    <div  (click)="rout(item)" *ngFor="let item of navList;index as i">
+      <a  (click)="scrollToElement(item.target)" [ngClass]="item.href==currentNav?'active':''">{{item.title}}</a>
+    </div>
+
+  </div>
+
+  <div class="base">
+    <div class="header">
+      <nav class="flex">
+        <div class="hamburger" (click)="openMenu()"><img src="assets/images/icons/hamburger.png"></div>
+
+        <img src="assets/images/icons/logo.png" alt="logo">
+
+        <ul class="flex">
+
+          <li (click)="rout(item)" *ngFor="let item of navList;index as i">
+            <a (click)="scrollToElement(item.target)"
+               [ngClass]="item.href==currentNav?'active':''">{{item.title}}</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="body content" id="home">
+      <div class="content_header">
+        <div class="big_title"> Minimalist Room</div>
+        <p>It is a long established fact that a reader will be distracted
+          by the readable content of a page when looking at
+          its layout.</p>
+      </div>
+
+      <img class="full_img" src="assets/images/image_1f.png">
+
+      <div class="flex info-list">
+        <div class="info">
+          <div>
+            <div class="info_title" id="about">Project Overview</div>
+            <div class="info_content">Online learning with us does not interfere with your daily life. because learning
+              can be
+              done anytime and anywhere. Online learning with us does not interfere with your daily life. because
+              learning can
+              be done anytime and anywhere. Online learning with us does not interfere with your daily life. because
+              learning
+              can be done anytime and anywhere.
+            </div>
+          </div>
+          <div class="info_content bottom_info">
+            <span>July 22 - 2022</span> <span>Interior Design - Furnitur</span>
+          </div>
+        </div>
+
+        <div class="info info2">
+
+          <div class="info_title">Design Process</div>
+          <div class="info_content">Online learning with us does not interfere with your daily life. because learning
+            can be
+            done anytime and anywhere. Online learning with us does not interfere with your daily life. because learning
+            can
+            be done anytime and anywhere.
+            <br><br>
+            Online learning with us does not interfere with your daily life. because learning can be done anytime and
+            anywhere. Online learning with us does not interfere with your daily life. because learning can be done
+            anytime
+            and anywhere.
+
+          </div>
+        </div>
+
+
+      </div>
+
+
+      <div class="images" id="service">
+        <div class="flex two-image">
+          <div class="half">
+            <img src="assets/images/image_2ch.png" alt="img">
+          </div>
+
+          <div class="half half2">
+            <img src="assets/images/image_3t.png" alt="img">
+          </div>
+        </div>
+
+        <img class="full_img" src="assets/images/image_4s.png">
+
+        <div class="flex two-image" id="team">
+          <div class="half">
+            <img src="assets/images/image_5s.png" alt="img">
+          </div>
+
+          <div class="half half2">
+            <img src="assets/images/image_6w.png" alt="img">
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="footer contact" id="contact">
+      <div class="flex first_part">
+        <div class="left_text">
+          let's discuss making your interior like a dream place!
+        </div>
+        <div class="right_text">
+          <div> Contact us below to work together to build your amazing interior</div>
+          <button> Contact Us</button>
+        </div>
+      </div>
+
+      <div class="flex second_part ">
+        <div class="left_text">
+          <a class="logo"> <img src="assets/images/icons/logo.png" alt="logo"></a>
+
+          <div class="best">One of the best furniture agency.</div>
+        </div>
+        <div class="right_text mb_bottom">
+          <div class="title flex-title">
+            <div class="point"></div>
+            Enter your email to get the laterst news
+          </div>
+          <div class="input">
+            <img src="assets/images/icons/vector.png">
+            <input placeholder="Email Address">
+          </div>
+          <div class="follow">
+            <div class="right">
+              <div clsss="title"> Follow us On</div>
+              <div class="icons">
+                <a class="circle" target="_blank" href="https://www.facebook.com/">
+                  <img src="assets/images/icons/facebook.png">
+                </a>
+                <a class="circle" target="_blank" href="https://www.instagram.com/">
+                  <img src="assets/images/icons/instagram.png">
+                </a>
+                <a class="circle" target="_blank" href="https://www.tiktok.com/">
+                  <img src="assets/images/icons/tiktok.png">
+                </a>
+                <a class="circle" target="_blank" href="https://www.youtube.com/">
+                  <img src="assets/images/icons/youtube.png">
+                </a>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<router-outlet></router-outlet>
