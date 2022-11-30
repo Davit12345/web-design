@@ -18,9 +18,8 @@
 
         <ul class="flex">
 
-          <li (click)="rout(item)" *ngFor="let item of navList;index as i">
-            <a (click)="scrollToElement(item.target)"
-               [ngClass]="item.href==currentNav?'active':''">{{item.title}}</a></li>
+          <li  [ngClass]="item.href==currentNav?'active':''" (click)="rout(item)" *ngFor="let item of navList;index as i">
+            <a (click)="scrollToElement(item.target)">{{item.title}}</a></li>
         </ul>
       </nav>
     </div>
